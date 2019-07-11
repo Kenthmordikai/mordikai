@@ -7,7 +7,7 @@ const App = () => {
 
   useEffect(() => {
     setName('Otomte JS');
-    setLogoPath('./assets/svg/oto.svg');
+    setLogoPath('./dist/assets/svg/oto.svg');
   }, []);
 
   return (
