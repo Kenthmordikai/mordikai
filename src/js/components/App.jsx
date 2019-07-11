@@ -14,6 +14,7 @@ const App = () => {
     <React.Fragment>
       <img className="oto_container_logo" src={logoPath} alt={name} />
       <h1 className="oto_container_title">{name}</h1>
+      <p>This is Ryan</p>
     </React.Fragment>
   );
 };
