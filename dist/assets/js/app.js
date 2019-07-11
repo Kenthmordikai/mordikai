@@ -57582,7 +57582,7 @@ var App = function App() {
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     setName('Otomte JS');
-    setLogoPath('./assets/svg/oto.svg');
+    setLogoPath('./dist/assets/svg/oto.svg');
   }, []);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     className: "oto_container_logo",
