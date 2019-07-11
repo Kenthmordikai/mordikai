@@ -1,68 +1,117 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Otomte JS
 
-## Available Scripts
+Building the web with austere simplicity. 🤖
 
-In the project directory, you can run:
+> Otomte JS is the successor of [initializr](https://github.com/crtved/initializr) (deprecated).
 
-### `npm start`
+## Package Status
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![Travis(.org)](https://img.shields.io/travis/crtved/otomtejs.svg?style=flat-square) [![npm](https://img.shields.io/npm/dm/otomtejs.svg?style=flat-square)](https://npmcharts.com/compare/otomtejs) [![npm](https://img.shields.io/npm/v/otomtejs.svg?style=flat-square)](https://www.npmjs.com/package/otomtejs) [![NpmLicense](https://img.shields.io/npm/l/otomtejs.svg?style=flat-square)](https://github.com/crtved/otomtejs/blob/master/LICENSE)
+[![install size](https://packagephobia.now.sh/badge?p=otomtejs)](https://packagephobia.now.sh/result?p=otomtejs)
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Contents
 
-### `npm test`
+- [Getting Otomte JS](#Getting-Otomte-JS)
+- [How to use Otomte JS](#How-to-use-Otomte-JS)
+- [Otomte | WordPress](#Otomte-JS--WordPress)
+- [Structure](#Structure)
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Otomte JS
 
-### `npm run build`
+You can either clone the Otomte JS from github or install using npm.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Clone Otomte JS: `git clone https://github.com/crtved/otomtejs.git`
+- Install using [npm](https://www.npmjs.com/): `npm i otomtejs`
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+## How to use Otomte JS
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Install all dev environment dependencies:
 
-### `npm run eject`
+```
+npm run oto:setup
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Initialize Otomte JS.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+npm run oto
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Compiles in development.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
+npm run oto:dev
+```
 
-## Learn More
+### Bundles JS and CSS for production.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+npm run oto:prod
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Switching default JavaScript framework.
 
-### Code Splitting
+```
+npm run oto:vue
+npm run oto:react <- default
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## Otomte JS | WordPress!
 
-### Analyzing the Bundle Size
+> This feature is still in development.
+> You can use Otomte JS in your WordPress website by adding it as a custom theme! Clone Otomte JS under `wp-content/themes/` and `cd` to the cloned folder.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+## Getting Started
 
-### Making a Progressive Web App
+### Set Ototme JS as a WordPress theme.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+```
+npm run oto:wp-setup
+```
 
-### Advanced Configuration
+> <span style="color: red;">**WARNING:**</span> Once everything is set up properly and you have a WordPress website running on Otomte theme, then you <span style="color: red;">**DO NOT**</span> want to run **`npm run oto:wp-setup`**, you'll end up starting from the scratch again, and possibly break your build. You only need to run **`npm run oto:wp-setup`** <span style="color: green;">**ONCE**</span> to prevent unwanted result.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+### Initialize Otomte Js on WordPress.
 
-### Deployment
+```
+npm run oto:wp-dev
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+### Build Otomte JS for production.
 
-### `npm run build` fails to minify
+```
+npm run oto:wp-prod
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Structure
+
+You will find the following files and directories under Otomte JS.
+
+```
+├── otomtejs
+│   └── config/
+│       ├── react-config/
+│       ├── vue-config/
+│       ├── wp-config/
+│       └── preset.js
+├── dist/
+│   ├── assets/
+│   │   ├── css/
+│   │   ├── fonts/
+│   │   ├── img/
+│   │   ├── js/
+│   │   └── svg/
+│   └── index.html
+└── src/
+    ├── js/
+    │   ├── components/
+    │   └── index.js
+    ├── scss/
+    │   ├── partials/
+    │   └── app.scss
+    └── index.html
+```
+
+## Thank you for using Otomte JS!
+
+💻 with ❤️ by [Art](https://dev.to/crtved)
