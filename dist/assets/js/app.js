@@ -57581,7 +57581,7 @@ var App = function App() {
       setName = _useState4[1];
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    setName('Otomte JS');
+    setName('Good Boy');
     setLogoPath('./dist/assets/svg/oto.svg');
   }, []);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -57590,7 +57590,7 @@ var App = function App() {
     alt: name
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
     className: "oto_container_title"
-  }, name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "This is Ryan"));
+  }, name));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (App);
