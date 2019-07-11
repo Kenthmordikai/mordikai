@@ -1,22 +1,20 @@
 import React, { useState, useEffect } from 'react';
+import { Route, Switch } from 'react-router-dom';
 import ReactDOM from 'react-dom';
+import Home from './pages/Home';
+import About from './pages/About';
 
 const App = () => {
-  const [logoPath, setLogoPath] = useState('');
-  const [name, setName] = useState('');
-
-  useEffect(() => {
-    setName('Good Boy');
-    setLogoPath('./dist/assets/svg/oto.svg');
-  }, []);
-
   return (
-    <React.Fragment>
-      <img className="oto_container_logo" src={logoPath} alt={name} />
-      <h1 className="oto_container_title">{name}</h1>
-    </React.Fragment>
+    <div id="page-wrapper">
+        <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/about" component={About} />
+        </Switch>
+    </div>
   );
 };
 
 export default App;
-ReactDOM.render(<App />, document.getElementById('app'));
+
+

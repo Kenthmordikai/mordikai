@@ -12,4 +12,4 @@ import 'react-app-polyfill/stable';
  */
 import 'bootstrap';
 import '../scss/app.scss';
-import './components/App';
+import './components/Index';
