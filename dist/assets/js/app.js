@@ -64869,6 +64869,97 @@ react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_
 
 /***/ }),
 
+/***/ "./src/js/components/Tabs.jsx":
+/*!************************************!*\
+  !*** ./src/js/components/Tabs.jsx ***!
+  \************************************/
+/*! exports provided: Tabs, Tab, TabPanel */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Tabs", function() { return Tabs; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Tab", function() { return Tab; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TabPanel", function() { return TabPanel; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+
+var TabContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["createContext"])();
+var Tabs = function Tabs(props) {
+  var initialValue = props.initialValue,
+      _props$className = props.className,
+      className = _props$className === void 0 ? '' : _props$className,
+      children = props.children,
+      restProps = _objectWithoutProperties(props, ["initialValue", "className", "children"]);
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(initialValue),
+      _useState2 = _slicedToArray(_useState, 2),
+      activeTab = _useState2[0],
+      changeTab = _useState2[1];
+
+  var tabProviderValue = {
+    activeTab: activeTab,
+    changeTab: changeTab
+  };
+  var classNames = "tabs ".concat(className);
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TabContext.Provider, {
+    value: tabProviderValue
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", _extends({
+    className: classNames
+  }, restProps), children));
+};
+var Tab = function Tab(props) {
+  var name = props.name,
+      _props$className2 = props.className,
+      className = _props$className2 === void 0 ? '' : _props$className2,
+      _props$onClick = props.onClick,
+      onClick = _props$onClick === void 0 ? function () {} : _props$onClick,
+      children = props.children,
+      restProps = _objectWithoutProperties(props, ["name", "className", "onClick", "children"]);
+
+  var tabContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(TabContext);
+  var classNames = "\n\t\ttab\n\t\t".concat(tabContext.activeTab === name ? 'active' : '', "\n\t\t").concat(className, "\n\t");
+
+  var handleClick = function handleClick(event) {
+    tabContext.changeTab(name);
+    onClick(event);
+  };
+
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", _extends({
+    className: classNames,
+    onClick: handleClick
+  }, restProps), children);
+};
+var TabPanel = function TabPanel(props) {
+  var name = props.name,
+      _props$className3 = props.className,
+      className = _props$className3 === void 0 ? '' : _props$className3,
+      children = props.children,
+      restProps = _objectWithoutProperties(props, ["name", "className", "children"]);
+
+  var tabContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(TabContext);
+  var classNames = "tab-panel ".concat(className);
+  return tabContext.activeTab === name && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", _extends({
+    className: classNames
+  }, restProps), children);
+}; // export default Tabs;
+
+/***/ }),
+
 /***/ "./src/js/components/layouts/Master.jsx":
 /*!**********************************************!*\
   !*** ./src/js/components/layouts/Master.jsx ***!
@@ -64983,6 +65074,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _styles_styles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../styles/styles */ "./src/js/components/styles/styles.jsx");
+/* harmony import */ var _Tabs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Tabs */ "./src/js/components/Tabs.jsx");
+
 
 
 
@@ -64991,7 +65084,17 @@ __webpack_require__.r(__webpack_exports__);
 var Home = function Home() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Homepage"));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Homepage"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Tabs__WEBPACK_IMPORTED_MODULE_4__["Tabs"], {
+    initialValue: "tab-react"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Tabs__WEBPACK_IMPORTED_MODULE_4__["Tab"], {
+    name: "tab-react1"
+  }, "Tab1"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Tabs__WEBPACK_IMPORTED_MODULE_4__["Tab"], {
+    name: "tab-react2"
+  }, "Tab2"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Tabs__WEBPACK_IMPORTED_MODULE_4__["TabPanel"], {
+    name: "tab-react1"
+  }, "Tab1 Content"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Tabs__WEBPACK_IMPORTED_MODULE_4__["TabPanel"], {
+    name: "tab-react2"
+  }, "Tab2 Content")));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Home);
