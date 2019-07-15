@@ -1,17 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { Route, Switch } from 'react-router-dom';
 import ReactDOM from 'react-dom';
-import Home from './pages/Home';
-import About from './pages/About';
+import SideNav from './layouts/SideNav';
+import Master from './layouts/Master';
+import {MainWrapper} from './styles/styles';
 
 const App = () => {
   return (
-    <div id="page-wrapper">
-        <Switch>
-            <Route path="/" exact component={Home} />
-            <Route path="/about" component={About} />
-        </Switch>
-    </div>
+    <MainWrapper>
+      <SideNav />
+      <Master />
+    </MainWrapper>
   );
 };
 

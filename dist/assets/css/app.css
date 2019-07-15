@@ -6707,8 +6707,6 @@ a.text-dark:hover, a.text-dark:focus {
 *
  */
 .oto_container {
-  background-color: #17161d;
-  height: 100vh;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
