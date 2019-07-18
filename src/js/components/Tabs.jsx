@@ -2,7 +2,7 @@ import React, { createContext, useState, useContext } from 'react';
 
 const TabContext = createContext();
 
-export const Tabs = (props) => {
+const Tabs = (props) => {
 	const {
 		initialValue,
 		className = '',
@@ -24,7 +24,7 @@ export const Tabs = (props) => {
 	)
 }
 
-export const Tab = (props) => {
+const Tab = (props) => {
 	const {
     name,
     className = '',
@@ -53,7 +53,7 @@ export const Tab = (props) => {
 	);
 }
 
-export const TabPanel = (props) => {
+const TabPanel = (props) => {
 	const { 
 		name, 
 		className = '', 
@@ -74,4 +74,15 @@ export const TabPanel = (props) => {
 	)
 }
 
-// export default Tabs;
+export {Tabs, Tab, TabPanel};
+
+
+
+
+
+
+
+
+
+
+

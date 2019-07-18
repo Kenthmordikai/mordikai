@@ -64899,6 +64899,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 
 var TabContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["createContext"])();
+
 var Tabs = function Tabs(props) {
   var initialValue = props.initialValue,
       _props$className = props.className,
@@ -64922,6 +64923,7 @@ var Tabs = function Tabs(props) {
     className: classNames
   }, restProps), children));
 };
+
 var Tab = function Tab(props) {
   var name = props.name,
       _props$className2 = props.className,
@@ -64944,6 +64946,7 @@ var Tab = function Tab(props) {
     onClick: handleClick
   }, restProps), children);
 };
+
 var TabPanel = function TabPanel(props) {
   var name = props.name,
       _props$className3 = props.className,
@@ -64956,7 +64959,9 @@ var TabPanel = function TabPanel(props) {
   return tabContext.activeTab === name && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", _extends({
     className: classNames
   }, restProps), children);
-}; // export default Tabs;
+};
+
+
 
 /***/ }),
 
