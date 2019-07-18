@@ -64883,8 +64883,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TabPanel", function() { return TabPanel; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -64893,10 +64891,6 @@ function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = 
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-
-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
 
 var TabContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["createContext"])();
 
@@ -64904,8 +64898,7 @@ var Tabs = function Tabs(props) {
   var initialValue = props.initialValue,
       _props$className = props.className,
       className = _props$className === void 0 ? '' : _props$className,
-      children = props.children,
-      restProps = _objectWithoutProperties(props, ["initialValue", "className", "children"]);
+      children = props.children;
 
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(initialValue),
       _useState2 = _slicedToArray(_useState, 2),
@@ -64919,9 +64912,9 @@ var Tabs = function Tabs(props) {
   var classNames = "tabs ".concat(className);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TabContext.Provider, {
     value: tabProviderValue
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", _extends({
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: classNames
-  }, restProps), children));
+  }, children));
 };
 
 var Tab = function Tab(props) {
@@ -64930,9 +64923,7 @@ var Tab = function Tab(props) {
       className = _props$className2 === void 0 ? '' : _props$className2,
       _props$onClick = props.onClick,
       onClick = _props$onClick === void 0 ? function () {} : _props$onClick,
-      children = props.children,
-      restProps = _objectWithoutProperties(props, ["name", "className", "onClick", "children"]);
-
+      children = props.children;
   var tabContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(TabContext);
   var classNames = "\n\t\ttab\n\t\t".concat(tabContext.activeTab === name ? 'active' : '', "\n\t\t").concat(className, "\n\t");
 
@@ -64941,24 +64932,22 @@ var Tab = function Tab(props) {
     onClick(event);
   };
 
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", _extends({
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: classNames,
     onClick: handleClick
-  }, restProps), children);
+  }, children);
 };
 
 var TabPanel = function TabPanel(props) {
   var name = props.name,
       _props$className3 = props.className,
       className = _props$className3 === void 0 ? '' : _props$className3,
-      children = props.children,
-      restProps = _objectWithoutProperties(props, ["name", "className", "children"]);
-
+      children = props.children;
   var tabContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(TabContext);
   var classNames = "tab-panel ".concat(className);
-  return tabContext.activeTab === name && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", _extends({
+  return tabContext.activeTab === name && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: classNames
-  }, restProps), children);
+  }, children);
 };
 
 
@@ -65080,6 +65069,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _styles_styles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../styles/styles */ "./src/js/components/styles/styles.jsx");
 /* harmony import */ var _Tabs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Tabs */ "./src/js/components/Tabs.jsx");
+/* harmony import */ var _test_ItemList__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../test/ItemList */ "./src/js/components/test/ItemList.jsx");
+/* harmony import */ var _test_Nav__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../test/Nav */ "./src/js/components/test/Nav.jsx");
+/* harmony import */ var _test_ItemListContext__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../test/ItemListContext */ "./src/js/components/test/ItemListContext.jsx");
+
+
+
 
 
 
@@ -65090,14 +65085,14 @@ var Home = function Home() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Homepage"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Tabs__WEBPACK_IMPORTED_MODULE_4__["Tabs"], {
-    initialValue: "tab-react"
+    initialValue: "tab-react1"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Tabs__WEBPACK_IMPORTED_MODULE_4__["Tab"], {
     name: "tab-react1"
   }, "Tab1"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Tabs__WEBPACK_IMPORTED_MODULE_4__["Tab"], {
     name: "tab-react2"
   }, "Tab2"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Tabs__WEBPACK_IMPORTED_MODULE_4__["TabPanel"], {
     name: "tab-react1"
-  }, "Tab1 Content"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Tabs__WEBPACK_IMPORTED_MODULE_4__["TabPanel"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_test_ItemListContext__WEBPACK_IMPORTED_MODULE_7__["ItemProvider"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_test_Nav__WEBPACK_IMPORTED_MODULE_6__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_test_ItemList__WEBPACK_IMPORTED_MODULE_5__["default"], null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Tabs__WEBPACK_IMPORTED_MODULE_4__["TabPanel"], {
     name: "tab-react2"
   }, "Tab2 Content")));
 };
@@ -65179,6 +65174,121 @@ var Paragraph = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].p(_tem
 var SideBar = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(_templateObject3());
 var SideLink = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].ul(_templateObject4());
 var Item = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].li(_templateObject5());
+
+/***/ }),
+
+/***/ "./src/js/components/test/ItemList.jsx":
+/*!*********************************************!*\
+  !*** ./src/js/components/test/ItemList.jsx ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _ItemList__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ItemList */ "./src/js/components/test/ItemList.jsx");
+/* harmony import */ var _ItemListContext__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ItemListContext */ "./src/js/components/test/ItemListContext.jsx");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+var ItemList = function ItemList() {
+  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_ItemListContext__WEBPACK_IMPORTED_MODULE_2__["listContext"]),
+      _useContext2 = _slicedToArray(_useContext, 2),
+      list = _useContext2[0],
+      setList = _useContext2[1];
+
+  console.log(list);
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, list.map(function (item) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ItemList__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      name: item.name,
+      age: item.age
+    });
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (ItemList);
+
+/***/ }),
+
+/***/ "./src/js/components/test/ItemListContext.jsx":
+/*!****************************************************!*\
+  !*** ./src/js/components/test/ItemListContext.jsx ***!
+  \****************************************************/
+/*! exports provided: listContext, ItemProvider */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "listContext", function() { return listContext; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ItemProvider", function() { return ItemProvider; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _ItemList__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ItemList */ "./src/js/components/test/ItemList.jsx");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+var listContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["createContext"])();
+var ItemProvider = function ItemProvider(props) {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([{
+    name: 'Tucker',
+    age: 10,
+    id: 12
+  }, {
+    name: 'Richard',
+    age: 20,
+    id: 15
+  }, {
+    name: 'Simmons',
+    age: 15,
+    id: 11
+  }]),
+      _useState2 = _slicedToArray(_useState, 2),
+      list = _useState2[0],
+      setList = _useState2[1];
+
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(listContext.Provider, {
+    value: [list, setList]
+  }, props.children);
+};
+
+/***/ }),
+
+/***/ "./src/js/components/test/Nav.jsx":
+/*!****************************************!*\
+  !*** ./src/js/components/test/Nav.jsx ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var Nav = function Nav() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Test"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "List Item: "));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Nav);
 
 /***/ }),
 

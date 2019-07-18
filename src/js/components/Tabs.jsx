@@ -7,7 +7,6 @@ const Tabs = (props) => {
 		initialValue,
 		className = '',
 		children,
-		...restProps
 	} = props;
 
 	const [activeTab, changeTab] = useState(initialValue);
@@ -17,7 +16,7 @@ const Tabs = (props) => {
 
 	return(
 		<TabContext.Provider value={tabProviderValue}>
-			<div className={classNames} {...restProps}>
+			<div className={classNames}>
 				{children}
 			</div>
 		</TabContext.Provider>
@@ -30,7 +29,6 @@ const Tab = (props) => {
     className = '',
     onClick = () => {},
     children,
-    ...restProps
 	} = props;
 	
 	const tabContext = useContext(TabContext);
@@ -47,7 +45,7 @@ const Tab = (props) => {
 	};
 
 	return(
-		<span className={classNames} onClick={handleClick} {...restProps}>
+		<span className={classNames} onClick={handleClick}>
 			{children}
 		</span>
 	);
@@ -58,7 +56,6 @@ const TabPanel = (props) => {
 		name, 
 		className = '', 
 		children, 
-		...restProps 
 	} = props;
 
 	const tabContext = useContext(TabContext);
@@ -67,7 +64,7 @@ const TabPanel = (props) => {
 
 	return(
 		tabContext.activeTab === name && (
-			<div className={classNames} {...restProps}>
+			<div className={classNames}>
 				{children}
 			</div>
 		)
