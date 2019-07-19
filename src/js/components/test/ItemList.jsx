@@ -1,11 +1,9 @@
 import React, {createContext, useState, useContext} from 'react';
-import List from './ItemList';
+import List from './List';
 import { listContext } from './ItemListContext';
 
 const ItemList = () => {
     const [list, setList] = useContext(listContext);
-
-console.log(list);
 
     return (
         <div>

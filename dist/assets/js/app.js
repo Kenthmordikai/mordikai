@@ -65188,7 +65188,7 @@ var Item = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].li(_templat
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _ItemList__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ItemList */ "./src/js/components/test/ItemList.jsx");
+/* harmony import */ var _List__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./List */ "./src/js/components/test/List.jsx");
 /* harmony import */ var _ItemListContext__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ItemListContext */ "./src/js/components/test/ItemListContext.jsx");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
@@ -65208,9 +65208,8 @@ var ItemList = function ItemList() {
       list = _useContext2[0],
       setList = _useContext2[1];
 
-  console.log(list);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, list.map(function (item) {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ItemList__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_List__WEBPACK_IMPORTED_MODULE_1__["default"], {
       name: item.name,
       age: item.age
     });
@@ -65268,6 +65267,29 @@ var ItemProvider = function ItemProvider(props) {
     value: [list, setList]
   }, props.children);
 };
+
+/***/ }),
+
+/***/ "./src/js/components/test/List.jsx":
+/*!*****************************************!*\
+  !*** ./src/js/components/test/List.jsx ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var List = function List(_ref) {
+  var name = _ref.name,
+      age = _ref.age;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, age));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (List);
 
 /***/ }),
 
